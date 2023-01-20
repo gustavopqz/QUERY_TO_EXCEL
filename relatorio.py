@@ -1,14 +1,11 @@
 ##Relatório que traz alunos pré-matriculados com contrato assinado
 import streamlit as st
 import pyodbc
-from dotenv import load_dotenv
 import pandas as pd
 from datetime import date
 
 today = date.today()
 hoje = today.strftime("%d-%m-%Y")
-
-load_dotenv()
 
 dbUser = st.secrets['DB_USER']
 dbPass = st.secrets['DB_PASS']
