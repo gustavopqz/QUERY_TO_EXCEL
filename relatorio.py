@@ -13,8 +13,6 @@ database = st.secrets['DB_NAME']
 server = st.secrets['DB_IP']
 query = st.secrets['QUERY']
 
-print(server, database, dbUser, dbPass)
-
 st.title('Alunos pré-matriculados com contrato assinado, período 231.')
 #Conexão com o banco de dados
 connection = pyodbc.connect(
@@ -38,5 +36,4 @@ with open(f'{hoje}.xlsx', 'rb') as excel:
 
 connection.commit()
 connection.close()
-
 
